@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapty</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <script defer src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js" integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script>
+    <script defer src="./main.js"></script>
+</head>
+<body>
+        <section class="container py-4">
+            <div class="row">
+                <div class="col-md-4 px-0" id="controlls">
+                    <header class="text-center py-4">
+                        <img src="logo.png" class="img-fluid" style="width: 35%;" alt="logo">
+                    </header>
+                    <main class="container">
+                        <form class="form hidden">
+                            <div class="row">
+                                <div class="col-lg-6 my-1 form-group">
+                                    <label for="typeInput">Type</label>
+                                    <select id="inputType" class="form-control">
+                                        <option value="running">running</option>
+                                        <option value="cycling">cycling</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-6 my-1 form-group">
+                                    <label for="inputDistance">Distance</label>
+                                    <input autocomplete="off" type="text" class="form-control" name="" id="inputDistance" placeholder="km">
+                                </div>
+                                <div class="col-lg-6 my-1 form-group">
+                                    <label for="inputDuration">Duration</label>
+                                    <input autocomplete="off" type="text" class="form-control" name="" id="inputDuration" placeholder="min">
+                                </div>
+                                <div class="col-lg-6 my-1 form-group">
+                                    <label for="inputCadence">Cadence</label>
+                                    <input autocomplete="off" type="text" class="form-control" name="" id="inputCadence" placeholder="step/min">
+                                </div>
+                                <div class="col-lg-6 my-1 hidden form-group">
+                                    <label for="inputElevation">Elevation</label>
+                                    <input autocomplete="off" type="text" class="form-control" name="" id="inputElevation" placeholder="Elevation">
+                                </div>
+                                <div class="col-lg-6 my-3 form-group w-100">
+                                    <button class="btn btn-secondary w-100" type="submit">Add</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="workouts-container">
+                            <ul class="workouts list-unstyled"></ul>
+                        </div>
+                    </main>
+                    <footer class="py-3 text-center text-white container">
+                        <div class="mb-3">
+                            <button class="btn btn-danger w-75 m-auto" id="reset">Reset</button>
+                        </div>
+                        <small>
+                            © Copyright by <i><u>Ahmed Awad</u></i> used for my portfolio. 
+                        </small>
+                    </footer>
+                </div>
+                <div id="map" class="col-md-8 px-0"></div>
+            </div>
+        </section>
+
+</body>
+</html>
